@@ -7,7 +7,8 @@
 
   function setLabel() {
     var b = document.querySelector('.theme');
-    if (b) b.textContent = effective() === 'dark' ? 'Light' : 'Dark';
+    var es = root.lang === 'es';
+    if (b) b.textContent = effective() === 'dark' ? (es ? 'Claro' : 'Light') : (es ? 'Oscuro' : 'Dark');
   }
 
   window.toggleTheme = function () {
