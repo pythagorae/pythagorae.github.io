@@ -33,7 +33,7 @@ T = {
         "caps": [
             ("ai", "Artificial intelligence &amp; machine learning", "Model development, training and evaluation; reinforcement learning; integration of large language models into real systems."),
             ("decision", "Optimal solvers for AI", "Extending language models with search, planning, optimization engines and imperfect-information solvers &mdash; so AI agents reach optimal decisions, not just plausible ones."),
-            ("local", "Local LLM inference", "Open language models running on your own hardware &mdash; GPU sizing, serving, quantization and fine-tuning. Private, sovereign and cost-controlled."),
+            ("local", "Local &amp; sovereign LLM inference", "Open language models on your own hardware, or on infrastructure we operate for you with service guarantees &mdash; GPU sizing, serving, quantization, fine-tuning. Private, sovereign, cost-controlled."),
             ("signal", "Signal &amp; data processing", "High-volume sensor and telemetry data &mdash; from raw streams and undocumented formats to calibrated, usable products."),
             ("hpc", "High-performance &amp; distributed systems", "GPU and HPC computing, cloud and on-premise infrastructure, reliable systems in production."),
             ("space", "Space &amp; ground systems", "Software for satellite, ground-segment and scientific systems, where correctness is not optional."),
@@ -72,7 +72,7 @@ T = {
         "caps": [
             ("ai", "Inteligencia artificial y aprendizaje autom&aacute;tico", "Desarrollo, entrenamiento y evaluaci&oacute;n de modelos; aprendizaje por refuerzo; integraci&oacute;n de modelos de lenguaje en sistemas reales."),
             ("decision", "Solvers &oacute;ptimos para IA", "Extendemos modelos de lenguaje con b&uacute;squeda, planificaci&oacute;n, motores de optimizaci&oacute;n y solvers de informaci&oacute;n imperfecta &mdash; para que los agentes de IA lleguen a decisiones &oacute;ptimas, no solo plausibles."),
-            ("local", "Inferencia de LLM local", "Modelos de lenguaje abiertos corriendo en tu propio hardware &mdash; dimensionamiento de GPU, serving, cuantizaci&oacute;n y fine-tuning. Privado, soberano y con costo controlado."),
+            ("local", "Inferencia de LLM local y soberana", "Modelos de lenguaje abiertos en tu propio hardware, o en infraestructura que operamos para vos con garant&iacute;as de servicio &mdash; dimensionamiento de GPU, serving, cuantizaci&oacute;n, fine-tuning. Privado, soberano, con costo controlado."),
             ("signal", "Procesamiento de se&ntilde;ales y datos", "Datos de sensores y telemetr&iacute;a en gran volumen &mdash; de flujos crudos y formatos sin documentar a productos calibrados y utilizables."),
             ("hpc", "Sistemas distribuidos y de alto rendimiento", "C&oacute;mputo en GPU y HPC, infraestructura en la nube y propia, sistemas confiables en producci&oacute;n."),
             ("space", "Sistemas espaciales y de segmento terreno", "Software para sistemas satelitales, de segmento terreno y cient&iacute;ficos, donde la correcci&oacute;n no es opcional."),
