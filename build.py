@@ -23,10 +23,10 @@ T = {
         "lede": "Artificial intelligence, high-performance computing and space systems &mdash; from raw data to production systems.",
         "cta1": "Talk to us",
         "cta2": "Our capabilities",
-        "statement": "We build software that turns raw, complex data into something you can depend on.",
+        "statement": "We build software that turns raw, complex data into something you can trust.",
         "principles": [
             ("First principles", "We understand the whole system before we change it &mdash; physics, data and code."),
-            ("Built to be correct", "Mission-critical habits: tested, measured, and honest about uncertainty."),
+            ("Built to be correct", "Mission-critical habits: tested, measured, verified before it ships."),
             ("End to end", "From the sensor or the model to production &mdash; one team owns the result."),
         ],
         "cap_h": "Capabilities",
@@ -66,7 +66,7 @@ T = {
         "statement": "Construimos software que convierte datos crudos y complejos en algo en lo que se puede confiar.",
         "principles": [
             ("Primeros principios", "Entendemos el sistema completo antes de cambiarlo &mdash; f&iacute;sica, datos y c&oacute;digo."),
-            ("Hecho para ser correcto", "H&aacute;bitos de misi&oacute;n cr&iacute;tica: probado, medido y honesto con la incertidumbre."),
+            ("Hecho para ser correcto", "H&aacute;bitos de misi&oacute;n cr&iacute;tica: probado, medido y verificado antes de entregarse."),
             ("De punta a punta", "Del sensor o el modelo a producci&oacute;n &mdash; un mismo equipo es due&ntilde;o del resultado."),
         ],
         "cap_h": "Capacidades",
