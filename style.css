@@ -207,6 +207,17 @@ ul.items > li:last-child { border-bottom: 0; }
 
 .meta strong { color: var(--fg); font-weight: 600; }
 
+/* ---------- team ---------- */
+
+ul.team {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 2rem 1.5rem;
+}
+ul.team img {
+  display: block; width: 7.5rem; height: 7.5rem; border-radius: 50%;
+  object-fit: cover; border: 1px solid var(--rule); margin-bottom: .9rem;
+}
+
 /* ---------- footer ---------- */
 
 footer {
