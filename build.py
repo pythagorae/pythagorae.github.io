@@ -27,7 +27,7 @@ T = {
         "principles": [
             ("First principles", "We understand the whole system before we change it &mdash; physics, data and code."),
             ("Built to be correct", "Mission-critical habits: tested, measured, verified before it ships."),
-            ("End to end", "From the sensor or the model to production &mdash; one team owns the result."),
+            ("End to end", "From sensor to model to production &mdash; one team."),
         ],
         "cap_h": "Capabilities",
         "cap_sub": "Where we bring depth &mdash; as engineering, R&amp;D, consulting and training for industrial, scientific, space and government clients.",
@@ -67,7 +67,7 @@ T = {
         "principles": [
             ("Primeros principios", "Entendemos el sistema completo antes de cambiarlo &mdash; f&iacute;sica, datos y c&oacute;digo."),
             ("Hecho para ser correcto", "H&aacute;bitos de misi&oacute;n cr&iacute;tica: probado, medido y verificado antes de entregarse."),
-            ("De punta a punta", "Del sensor o el modelo a producci&oacute;n &mdash; un mismo equipo es due&ntilde;o del resultado."),
+            ("De punta a punta", "Del sensor al modelo y a producci&oacute;n &mdash; un solo equipo."),
         ],
         "cap_h": "Capacidades",
         "cap_sub": "Donde aportamos profundidad &mdash; como ingenier&iacute;a, I+D, consultor&iacute;a y capacitaci&oacute;n para clientes industriales, cient&iacute;ficos, espaciales y gubernamentales.",
