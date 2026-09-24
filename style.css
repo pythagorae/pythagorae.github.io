@@ -156,6 +156,7 @@ strong { font-weight: 620; }
 }
 
 .rows > li:first-child { border-top: 1px solid var(--rule); }
+h2 + .rows > li:first-child { border-top: 0; }
 
 .rows > li > a,
 .rows > li > .row {
