@@ -23,7 +23,6 @@ T = {
         "lede": "Artificial intelligence, high-performance computing and space systems &mdash; from raw data to systems you can trust.",
         "cta1": "Talk to us",
         "cta2": "Our capabilities",
-        "motto": "&Pi;&alpha;&nu;&tau;&alpha; &alpha;&rho;&iota;&theta;&mu;&omicron;&sigmaf; &mdash; all is number",
         "statement": "We build software that turns raw, complex data into something you can compute on.",
         "principles": [
             ("First principles", "We understand the whole system before we change it &mdash; physics, data and code."),
@@ -64,7 +63,6 @@ T = {
         "lede": "Inteligencia artificial, c&oacute;mputo de alto rendimiento y sistemas espaciales &mdash; de los datos crudos a sistemas en los que se puede confiar.",
         "cta1": "Hablemos",
         "cta2": "Nuestras capacidades",
-        "motto": "&Pi;&alpha;&nu;&tau;&alpha; &alpha;&rho;&iota;&theta;&mu;&omicron;&sigmaf; &mdash; todo es n&uacute;mero",
         "statement": "Construimos software que convierte datos crudos y complejos en algo sobre lo que se puede computar.",
         "principles": [
             ("Primeros principios", "Entendemos el sistema completo antes de cambiarlo &mdash; f&iacute;sica, datos y c&oacute;digo."),
@@ -210,7 +208,6 @@ def page(lang, t):
 
 <section class="statement">
   <div class="wrap">
-    <p class="motto reveal">{t["motto"]}</p>
     <blockquote class="reveal">{t["statement"]}</blockquote>
     <div class="principles">{principles}</div>
   </div>
