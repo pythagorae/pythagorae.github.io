@@ -30,7 +30,6 @@ T = {
             ("End to end", "From sensor to model to production &mdash; one team."),
         ],
         "cap_h": "Capabilities",
-        "cap_sub": "Where we bring depth &mdash; as engineering, R&amp;D, consulting and training for industrial, scientific, space and government clients.",
         "caps": [
             ("ai", "Artificial intelligence &amp; machine learning", "Model development, training and evaluation; reinforcement learning; integration of large language models into real systems."),
             ("decision", "Optimal solvers for AI", "Extending language models with search, planning and optimization engines, and with solvers for imperfect-information problems &mdash; so AI agents reach optimal decisions, not just plausible ones."),
@@ -70,7 +69,6 @@ T = {
             ("De punta a punta", "Del sensor al modelo y a producci&oacute;n &mdash; un solo equipo."),
         ],
         "cap_h": "Capacidades",
-        "cap_sub": "Donde aportamos profundidad &mdash; como ingenier&iacute;a, I+D, consultor&iacute;a y capacitaci&oacute;n para clientes industriales, cient&iacute;ficos, espaciales y gubernamentales.",
         "caps": [
             ("ai", "Inteligencia artificial y aprendizaje autom&aacute;tico", "Desarrollo, entrenamiento y evaluaci&oacute;n de modelos; aprendizaje por refuerzo; integraci&oacute;n de modelos de lenguaje en sistemas reales."),
             ("decision", "Solvers &oacute;ptimos para IA", "Extendemos modelos de lenguaje con motores de b&uacute;squeda, planificaci&oacute;n y optimizaci&oacute;n, y con solvers para problemas de informaci&oacute;n imperfecta &mdash; para que los agentes de IA lleguen a decisiones &oacute;ptimas, no solo plausibles."),
@@ -215,7 +213,7 @@ def page(lang, t):
 
 <section id="capabilities" class="section">
   <div class="wrap">
-    <header class="section-head reveal"><h2>{t["cap_h"]}</h2><p>{t["cap_sub"]}</p></header>
+    <header class="section-head reveal"><h2>{t["cap_h"]}</h2></header>
     <div class="grid">{caps}
     </div>
   </div>
