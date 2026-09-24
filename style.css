@@ -230,6 +230,10 @@ blockquote {
 }
 .contact p { color: var(--muted); font-size: 1.15rem; margin: 0 0 2.2rem; }
 
+.contact-actions { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+.btn.copy { font: inherit; font-weight: 500; font-size: 1.1rem; cursor: pointer; min-width: 7.5rem; justify-content: center; }
+.btn.copy.done { border-color: var(--bronze); color: var(--bronze-2); }
+
 /* footer */
 .foot { border-top: 1px solid var(--rule); padding: 2.2rem 0 2.6rem; }
 .foot-in { display: flex; justify-content: space-between; align-items: center; gap: 1.2rem; flex-wrap: wrap; }

@@ -37,6 +37,29 @@
       });
     });
 
+    // Copy-to-clipboard buttons (e.g. the contact email).
+    document.querySelectorAll('[data-copy]').forEach(function (b) {
+      var label = b.textContent;
+      b.addEventListener('click', function () {
+        var text = b.getAttribute('data-copy');
+        function done() {
+          b.textContent = b.getAttribute('data-done').replace('&iexcl;', '\u00a1');
+          b.classList.add('done');
+          setTimeout(function () { b.textContent = label; b.classList.remove('done'); }, 1800);
+        }
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else { fallback(); }
+        function fallback() {
+          var ta = document.createElement('textarea');
+          ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); done(); } catch (e) {}
+          document.body.removeChild(ta);
+        }
+      });
+    });
+
     // Starfield: twinkling stars with a slow drift and pointer parallax.
     var canvas = document.getElementById('sky');
     if (!canvas || !canvas.getContext) return;
