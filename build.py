@@ -135,7 +135,6 @@ def page(lang, t):
         <article class="slide" role="group" aria-roledescription="slide" aria-label="{n + 1} / {total}">
           <div class="slide-art">{ART[key]()}</div>
           <div class="slide-body">
-            <span class="num">0{n + 1} <span>/ 0{total}</span></span>
             <h3>{title}</h3>
             <p>{desc}</p>
           </div>
