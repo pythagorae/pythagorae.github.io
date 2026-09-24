@@ -39,7 +39,6 @@ T = {
             ("space", "Space &amp; ground systems", "Software for satellite, ground-segment and scientific systems, where correctness is not optional."),
         ],
         "team_h": "Team",
-        "team_sub": "The people behind the work.",
         "team": [
             ("felipe", "Felipe", "Satellite systems &middot; radar &middot; distributed systems &middot; AI"),
             ("ismael", "Ismael", "Search &middot; planning &middot; reinforcement learning"),
@@ -78,7 +77,6 @@ T = {
             ("space", "Sistemas espaciales y de segmento terreno", "Software para sistemas satelitales, de segmento terreno y cient&iacute;ficos, donde la correcci&oacute;n no es opcional."),
         ],
         "team_h": "Equipo",
-        "team_sub": "Las personas detr&aacute;s del trabajo.",
         "team": [
             ("felipe", "Felipe", "Sistemas satelitales &middot; radar &middot; sistemas distribuidos &middot; IA"),
             ("ismael", "Ismael", "B&uacute;squeda &middot; planificaci&oacute;n &middot; aprendizaje por refuerzo"),
@@ -221,7 +219,7 @@ def page(lang, t):
 
 <section id="team" class="section alt">
   <div class="wrap">
-    <header class="section-head reveal"><h2>{t["team_h"]}</h2><p>{t["team_sub"]}</p></header>
+    <header class="section-head reveal"><h2>{t["team_h"]}</h2></header>
     <div class="team">{team}
     </div>
   </div>
