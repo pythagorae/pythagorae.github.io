@@ -36,7 +36,7 @@ T = {
             ("local", "Local &amp; sovereign LLM inference", "Open language models on your own hardware, or on infrastructure we manage for you &mdash; served with an open-source stack you can audit. GPU sizing, quantization, fine-tuning. Private, sovereign, cost-controlled."),
             ("signal", "Signal &amp; data processing", "High-volume sensor and telemetry data &mdash; from raw streams and undocumented formats to calibrated, usable products."),
             ("hpc", "High-performance &amp; distributed systems", "GPU and HPC computing, cloud and on-premise infrastructure, reliable systems in production."),
-            ("space", "Space &amp; ground systems", "Software for satellite, ground-segment and scientific systems, where correctness is not optional."),
+            ("space", "Space &amp; ground systems", "Software for satellite, ground-segment and scientific systems, with correctness built in from the start."),
         ],
         "team_h": "Team",
         "team": [
@@ -74,7 +74,7 @@ T = {
             ("local", "Inferencia de LLM local y soberana", "Modelos de lenguaje abiertos en tu propio hardware, o en infraestructura que gestionamos para vos &mdash; servidos con un stack de c&oacute;digo abierto que pod&eacute;s auditar. Dimensionamiento de GPU, cuantizaci&oacute;n, fine-tuning. Privado, soberano, con costo controlado."),
             ("signal", "Procesamiento de se&ntilde;ales y datos", "Datos de sensores y telemetr&iacute;a en gran volumen &mdash; de flujos crudos y formatos sin documentar a productos calibrados y utilizables."),
             ("hpc", "Sistemas distribuidos y de alto rendimiento", "C&oacute;mputo en GPU y HPC, infraestructura en la nube y propia, sistemas confiables en producci&oacute;n."),
-            ("space", "Sistemas espaciales y de segmento terreno", "Software para sistemas satelitales, de segmento terreno y cient&iacute;ficos, donde la correcci&oacute;n no es opcional."),
+            ("space", "Sistemas espaciales y de segmento terreno", "Software para sistemas satelitales, de segmento terreno y cient&iacute;ficos, con la correcci&oacute;n incorporada desde el dise&ntilde;o."),
         ],
         "team_h": "Equipo",
         "team": [
