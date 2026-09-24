@@ -17,8 +17,6 @@ T = {
         "title": "Pythagorae — Engineering for hard, complex systems",
         "desc": "Pythagorae — software, artificial intelligence, high-performance computing and space-systems engineering. Córdoba, Argentina.",
         "nav": ["Capabilities", "Team", "Contact"],
-        "prev": "Previous",
-        "next": "Next",
         "other": ("/es/", "es", "ES"),
         "eyebrow": "Pythagorae S.A.S. &middot; C&oacute;rdoba, Argentina",
         "h1": 'Engineering for <span class="grad">hard, complex systems.</span>',
@@ -57,8 +55,6 @@ T = {
         "title": "Pythagorae — Ingeniería para sistemas complejos",
         "desc": "Pythagorae — ingeniería de software, inteligencia artificial, cómputo de alto rendimiento y sistemas espaciales. Córdoba, Argentina.",
         "nav": ["Capacidades", "Equipo", "Contacto"],
-        "prev": "Anterior",
-        "next": "Siguiente",
         "other": ("/", "en", "EN"),
         "eyebrow": "Pythagorae S.A.S. &middot; C&oacute;rdoba, Argentina",
         "h1": 'Ingenier&iacute;a para <span class="grad">sistemas dif&iacute;ciles y complejos.</span>',
@@ -129,19 +125,15 @@ def tetractys_svg():
 def page(lang, t):
     other_href, other_lang, other_label = t["other"]
     home = "/" if lang == "en" else "/es/"
-    total = len(t["caps"])
     caps = "".join(
         f'''
-        <article class="slide" role="group" aria-roledescription="slide" aria-label="{n + 1} / {total}">
-          <div class="slide-art">{ART[key]()}</div>
-          <div class="slide-body">
+        <article class="card reveal" style="--i:{n % 2}">
+          <div class="card-art">{ART[key]()}</div>
+          <div class="card-body">
             <h3>{title}</h3>
             <p>{desc}</p>
           </div>
         </article>''' for n, (key, title, desc) in enumerate(t["caps"])
-    )
-    dots = "".join(
-        f'<button class="dot" type="button" aria-label="{n + 1}"></button>' for n in range(total)
     )
     principles = "".join(
         f'<div class="principle reveal" style="--i:{n}"><h3>{h}</h3><p>{p}</p></div>'
@@ -175,8 +167,8 @@ def page(lang, t):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=14">
-<script defer src="/site.js?v=11"></script>
+<link rel="stylesheet" href="/style.css?v=16">
+<script defer src="/site.js?v=15"></script>
 </head>
 <body>
 
@@ -219,16 +211,8 @@ def page(lang, t):
 <section id="capabilities" class="section">
   <div class="wrap">
     <header class="section-head reveal"><h2>{t["cap_h"]}</h2></header>
-    <div class="carousel reveal" aria-roledescription="carousel">
-      <div class="viewport" tabindex="0">
-        <div class="track">{caps}
-        </div>
-      </div>
-      <div class="controls">
-        <button class="arrow prev" type="button" aria-label="{t["prev"]}">&larr;</button>
-        <div class="dots">{dots}</div>
-        <button class="arrow next" type="button" aria-label="{t["next"]}">&rarr;</button>
-      </div>
+    <div class="grid">{caps}
+    </div>
     </div>
   </div>
 </section>
