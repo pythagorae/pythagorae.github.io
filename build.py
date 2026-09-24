@@ -47,7 +47,7 @@ T = {
         "contact_h": "Have a hard problem?",
         "contact_p": "Tell us about it. We reply to every message.",
         "contact_btn": "founder@pythagorae.com",
-        "legal": "Pythagorae S.A.S. &middot; CUIT 30-71960531-8 &middot; Villa Carlos Paz, C&oacute;rdoba, Argentina",
+        "legal": "Pythagorae S.A.S. &middot; CUIT 30-71960531-8 &middot; C&oacute;rdoba, Argentina",
     },
     "es": {
         "path": "es/index.html",
@@ -85,7 +85,7 @@ T = {
         "contact_h": "&iquest;Ten&eacute;s un problema dif&iacute;cil?",
         "contact_p": "Contanos. Respondemos todos los mensajes.",
         "contact_btn": "founder@pythagorae.com",
-        "legal": "Pythagorae S.A.S. &middot; CUIT 30-71960531-8 &middot; Villa Carlos Paz, C&oacute;rdoba, Argentina",
+        "legal": "Pythagorae S.A.S. &middot; CUIT 30-71960531-8 &middot; C&oacute;rdoba, Argentina",
     },
 }
 
