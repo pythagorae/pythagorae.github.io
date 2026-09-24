@@ -175,8 +175,8 @@ def page(lang, t):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=10">
-<script defer src="/site.js?v=10"></script>
+<link rel="stylesheet" href="/style.css?v=14">
+<script defer src="/site.js?v=11"></script>
 </head>
 <body>
 
@@ -220,7 +220,9 @@ def page(lang, t):
   <div class="wrap">
     <header class="section-head reveal"><h2>{t["cap_h"]}</h2></header>
     <div class="carousel reveal" aria-roledescription="carousel">
-      <div class="track" tabindex="0">{caps}
+      <div class="viewport" tabindex="0">
+        <div class="track">{caps}
+        </div>
       </div>
       <div class="controls">
         <button class="arrow prev" type="button" aria-label="{t["prev"]}">&larr;</button>

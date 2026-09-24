@@ -11,7 +11,8 @@ W, H = 320, 160
 
 
 def _svg(body):
-    return f'<svg class="art" viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">{body}</svg>'
+    # Extra headroom above/below so the art fills taller slides without cropping the sides.
+    return f'<svg class="art" viewBox="0 -24 {W} {H + 48}" preserveAspectRatio="xMidYMid meet" aria-hidden="true">{body}</svg>'
 
 
 def ai():
@@ -27,7 +28,7 @@ def ai():
                 if k % 3 == 0:
                     out.append(
                         f'<circle class="a-pulse" r="2.2"><animateMotion dur="{2.2 + (k % 5) * .35:.2f}s" '
-                        f'begin="{(k * .23) % 2:.2f}s" repeatCount="indefinite" path="M{x1},{y1} L{x2},{y2}"/></circle>'
+                        f'begin="-{(k * .23) % 2 + .01:.2f}s" repeatCount="indefinite" path="M{x1},{y1} L{x2},{y2}"/></circle>'
                     )
                 k += 1
     for li, ys in enumerate(layers):
@@ -84,7 +85,7 @@ def local():
             out.append(f'<line class="a-line" x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}"/>')
             if (side + i) % 2 == 0:
                 out.append(
-                    f'<circle class="a-pulse" r="2"><animateMotion dur="{1.8 + i * .3:.1f}s" begin="{(side * .4 + i * .2):.1f}s" '
+                    f'<circle class="a-pulse" r="2"><animateMotion dur="{1.8 + i * .3:.1f}s" begin="-{(side * .4 + i * .2) + .05:.2f}s" '
                     f'repeatCount="indefinite" path="M{b[0]:.1f},{b[1]:.1f} L{a[0]:.1f},{a[1]:.1f}"/></circle>'
                 )
     out.append(f'<rect class="a-chip" x="{cx - 38}" y="{cy - 38}" width="76" height="76" rx="8"/>')

@@ -28,66 +28,97 @@
       items.forEach(function (el) { el.classList.add('in'); });
     }
 
-    // Capabilities carousel: autoplay, arrows, dots, swipe (native scroll-snap).
+    // Capabilities carousel: transform-based, so page scrolling can never desync it.
     var car = document.querySelector('.carousel');
     if (car) {
+      var vp = car.querySelector('.viewport');
       var track = car.querySelector('.track');
       var slides = car.querySelectorAll('.slide');
       var dots = car.querySelectorAll('.dot');
-      var DUR = 6000, cur = -1, timer = null, hover = false, visible = false;
+      var N = slides.length, DUR = 6000, cur = 0, timer = null;
+      var hover = false, kbFocus = false, visible = false;
       car.style.setProperty('--dur', DUR + 'ms');
       if (still) car.classList.add('still');
 
-      function mark(i) {
-        if (i === cur) return;
-        cur = i;
+      function render(offsetPx) {
+        track.style.transform = 'translateX(calc(' + (-100 * cur) + '% + ' + (offsetPx || 0) + 'px))';
+      }
+      function markDots() {
         dots.forEach(function (d, k) {
           d.classList.remove('on');
-          if (k === i) { void d.offsetWidth; d.classList.add('on'); }
-          d.setAttribute('aria-current', k === i ? 'true' : 'false');
+          d.setAttribute('aria-current', k === cur ? 'true' : 'false');
         });
-      }
-      function go(i) {
-        i = (i + slides.length) % slides.length;
-        track.scrollTo({ left: slides[i].offsetLeft, behavior: still ? 'auto' : 'smooth' });
-        mark(i);
-        restart();
-      }
-      function nearest() {
-        var x = track.scrollLeft, best = 0, bd = Infinity;
-        slides.forEach(function (s, k) { var d = Math.abs(s.offsetLeft - x); if (d < bd) { bd = d; best = k; } });
-        return best;
+        void car.offsetWidth; // restart the progress fill
+        dots[cur].classList.add('on');
+        slides.forEach(function (s, k) { s.setAttribute('aria-hidden', k === cur ? 'false' : 'true'); });
       }
       function stop() { clearTimeout(timer); timer = null; }
       function restart() {
         stop();
-        var on = !still && !hover && visible && !document.hidden;
+        var on = !still && !hover && !kbFocus && visible && !document.hidden;
         car.classList.toggle('paused', !on);
         if (on) timer = setTimeout(function () { go(cur + 1); }, DUR);
+      }
+      function go(i) {
+        cur = ((i % N) + N) % N;
+        render(0);
+        markDots();
+        restart();
       }
 
       car.querySelector('.prev').addEventListener('click', function () { go(cur - 1); });
       car.querySelector('.next').addEventListener('click', function () { go(cur + 1); });
       dots.forEach(function (d, k) { d.addEventListener('click', function () { go(k); }); });
-      track.addEventListener('keydown', function (e) {
+      vp.addEventListener('keydown', function (e) {
         if (e.key === 'ArrowRight') { e.preventDefault(); go(cur + 1); }
         if (e.key === 'ArrowLeft') { e.preventDefault(); go(cur - 1); }
       });
-      var settle;
-      track.addEventListener('scroll', function () {
-        clearTimeout(settle);
-        settle = setTimeout(function () { var n = nearest(); if (n !== cur) { mark(n); restart(); } }, 120);
-      }, { passive: true });
+
+      // Swipe / drag. touch-action: pan-y keeps vertical page scrolling native.
+      var sx = 0, sy = 0, dx = 0, dragging = false, decided = false, horizontal = false, pid = null;
+      vp.addEventListener('pointerdown', function (e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        dragging = true; decided = false; horizontal = false; dx = 0;
+        sx = e.clientX; sy = e.clientY; pid = e.pointerId;
+      });
+      vp.addEventListener('pointermove', function (e) {
+        if (!dragging || e.pointerId !== pid) return;
+        var mx = e.clientX - sx, my = e.clientY - sy;
+        if (!decided && (Math.abs(mx) > 6 || Math.abs(my) > 6)) {
+          decided = true; horizontal = Math.abs(mx) > Math.abs(my);
+          if (horizontal) { track.classList.add('dragging'); try { vp.setPointerCapture(pid); } catch (err) {} stop(); }
+          else { dragging = false; }
+        }
+        if (horizontal) { dx = mx; render(dx); }
+      });
+      function endDrag() {
+        if (!dragging) return;
+        dragging = false;
+        track.classList.remove('dragging');
+        if (!horizontal) return;
+        var w = vp.clientWidth || 1;
+        if (dx < -Math.min(60, w * .15)) go(cur + 1);
+        else if (dx > Math.min(60, w * .15)) go(cur - 1);
+        else go(cur);
+      }
+      vp.addEventListener('pointerup', endDrag);
+      vp.addEventListener('pointercancel', endDrag);
+      vp.addEventListener('lostpointercapture', endDrag);
+      vp.addEventListener('click', function (e) { if (horizontal && Math.abs(dx) > 6) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+      // Pause only while someone is actually engaged with it.
       car.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hover = true; restart(); } });
       car.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hover = false; restart(); } });
-      car.addEventListener('focusin', function () { hover = true; restart(); });
-      car.addEventListener('focusout', function () { hover = false; restart(); });
+      car.addEventListener('focusin', function (e) {
+        var kb = false; try { kb = e.target.matches(':focus-visible'); } catch (err) {}
+        if (kb) { kbFocus = true; restart(); }
+      });
+      car.addEventListener('focusout', function () { if (kbFocus) { kbFocus = false; restart(); } });
       document.addEventListener('visibilitychange', restart);
       if ('IntersectionObserver' in window) {
-        new IntersectionObserver(function (es) { visible = es[0].isIntersecting; restart(); }, { threshold: 0.4 }).observe(car);
+        new IntersectionObserver(function (es) { visible = es[0].isIntersecting; restart(); }, { threshold: 0.35 }).observe(car);
       } else { visible = true; }
-      mark(0);
-      restart();
+      go(0);
     }
 
     // Starfield: twinkling stars with a slow drift and pointer parallax.
