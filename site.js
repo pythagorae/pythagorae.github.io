@@ -28,14 +28,67 @@
       items.forEach(function (el) { el.classList.add('in'); });
     }
 
-    // Cards: glow follows the pointer.
-    document.querySelectorAll('.card').forEach(function (card) {
-      card.addEventListener('pointermove', function (ev) {
-        var r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
-        card.style.setProperty('--my', (ev.clientY - r.top) + 'px');
+    // Capabilities carousel: autoplay, arrows, dots, swipe (native scroll-snap).
+    var car = document.querySelector('.carousel');
+    if (car) {
+      var track = car.querySelector('.track');
+      var slides = car.querySelectorAll('.slide');
+      var dots = car.querySelectorAll('.dot');
+      var DUR = 6000, cur = -1, timer = null, hover = false, visible = false;
+      car.style.setProperty('--dur', DUR + 'ms');
+      if (still) car.classList.add('still');
+
+      function mark(i) {
+        if (i === cur) return;
+        cur = i;
+        dots.forEach(function (d, k) {
+          d.classList.remove('on');
+          if (k === i) { void d.offsetWidth; d.classList.add('on'); }
+          d.setAttribute('aria-current', k === i ? 'true' : 'false');
+        });
+      }
+      function go(i) {
+        i = (i + slides.length) % slides.length;
+        track.scrollTo({ left: slides[i].offsetLeft, behavior: still ? 'auto' : 'smooth' });
+        mark(i);
+        restart();
+      }
+      function nearest() {
+        var x = track.scrollLeft, best = 0, bd = Infinity;
+        slides.forEach(function (s, k) { var d = Math.abs(s.offsetLeft - x); if (d < bd) { bd = d; best = k; } });
+        return best;
+      }
+      function stop() { clearTimeout(timer); timer = null; }
+      function restart() {
+        stop();
+        var on = !still && !hover && visible && !document.hidden;
+        car.classList.toggle('paused', !on);
+        if (on) timer = setTimeout(function () { go(cur + 1); }, DUR);
+      }
+
+      car.querySelector('.prev').addEventListener('click', function () { go(cur - 1); });
+      car.querySelector('.next').addEventListener('click', function () { go(cur + 1); });
+      dots.forEach(function (d, k) { d.addEventListener('click', function () { go(k); }); });
+      track.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); go(cur + 1); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); go(cur - 1); }
       });
-    });
+      var settle;
+      track.addEventListener('scroll', function () {
+        clearTimeout(settle);
+        settle = setTimeout(function () { var n = nearest(); if (n !== cur) { mark(n); restart(); } }, 120);
+      }, { passive: true });
+      car.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hover = true; restart(); } });
+      car.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hover = false; restart(); } });
+      car.addEventListener('focusin', function () { hover = true; restart(); });
+      car.addEventListener('focusout', function () { hover = false; restart(); });
+      document.addEventListener('visibilitychange', restart);
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) { visible = es[0].isIntersecting; restart(); }, { threshold: 0.4 }).observe(car);
+      } else { visible = true; }
+      mark(0);
+      restart();
+    }
 
     // Starfield: twinkling stars with a slow drift and pointer parallax.
     var canvas = document.getElementById('sky');
