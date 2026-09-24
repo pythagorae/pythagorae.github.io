@@ -33,7 +33,7 @@ T = {
         "caps": [
             ("ai", "Artificial intelligence &amp; machine learning", "Model development, training and evaluation; reinforcement learning; integration of large language models into real systems."),
             ("decision", "Optimal solvers for AI", "Extending language models with search, planning, optimization engines and imperfect-information solvers &mdash; so AI agents reach optimal decisions, not just plausible ones."),
-            ("local", "Local &amp; sovereign LLM inference", "Open language models on your own hardware, or on infrastructure we manage for you &mdash; served with an open-source stack you can audit, so privacy is verifiable, not promised. GPU sizing, quantization, fine-tuning. Your data never leaves your jurisdiction."),
+            ("local", "Local &amp; sovereign LLM inference", "Open language models on your own hardware, or on infrastructure we manage for you &mdash; served with an open-source stack you can audit, so privacy is verifiable. GPU sizing, quantization, fine-tuning. Your data never leaves your jurisdiction."),
             ("signal", "Signal &amp; data processing", "High-volume sensor and telemetry data &mdash; from raw streams and undocumented formats to calibrated, usable products."),
             ("hpc", "High-performance &amp; distributed systems", "GPU and HPC computing, cloud and on-premise infrastructure, reliable systems in production."),
             ("space", "Space &amp; ground systems", "Software for satellite, ground-segment and scientific systems, where correctness is not optional."),
@@ -72,7 +72,7 @@ T = {
         "caps": [
             ("ai", "Inteligencia artificial y aprendizaje autom&aacute;tico", "Desarrollo, entrenamiento y evaluaci&oacute;n de modelos; aprendizaje por refuerzo; integraci&oacute;n de modelos de lenguaje en sistemas reales."),
             ("decision", "Solvers &oacute;ptimos para IA", "Extendemos modelos de lenguaje con b&uacute;squeda, planificaci&oacute;n, motores de optimizaci&oacute;n y solvers de informaci&oacute;n imperfecta &mdash; para que los agentes de IA lleguen a decisiones &oacute;ptimas, no solo plausibles."),
-            ("local", "Inferencia de LLM local y soberana", "Modelos de lenguaje abiertos en tu propio hardware, o en infraestructura que gestionamos para vos &mdash; servidos con un stack de c&oacute;digo abierto que pod&eacute;s auditar: la privacidad se verifica, no se promete. Dimensionamiento de GPU, cuantizaci&oacute;n, fine-tuning. Tus datos no salen de tu jurisdicci&oacute;n."),
+            ("local", "Inferencia de LLM local y soberana", "Modelos de lenguaje abiertos en tu propio hardware, o en infraestructura que gestionamos para vos &mdash; servidos con un stack de c&oacute;digo abierto que pod&eacute;s auditar: la privacidad es verificable. Dimensionamiento de GPU, cuantizaci&oacute;n, fine-tuning. Tus datos no salen de tu jurisdicci&oacute;n."),
             ("signal", "Procesamiento de se&ntilde;ales y datos", "Datos de sensores y telemetr&iacute;a en gran volumen &mdash; de flujos crudos y formatos sin documentar a productos calibrados y utilizables."),
             ("hpc", "Sistemas distribuidos y de alto rendimiento", "C&oacute;mputo en GPU y HPC, infraestructura en la nube y propia, sistemas confiables en producci&oacute;n."),
             ("space", "Sistemas espaciales y de segmento terreno", "Software para sistemas satelitales, de segmento terreno y cient&iacute;ficos, donde la correcci&oacute;n no es opcional."),
