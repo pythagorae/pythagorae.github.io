@@ -43,8 +43,8 @@ T = {
         "team_h": "Team",
         "team_sub": "The people behind the work.",
         "team": [
-            ("agustin", "Agust&iacute;n", "Game theory and imperfect-information solvers."),
             ("ismael", "Ismael", "Search, planning and reinforcement learning."),
+            ("agustin", "Agust&iacute;n", "Game theory and imperfect-information solvers."),
         ],
         "contact_h": "Have a hard problem?",
         "contact_p": "Tell us about it. We reply to every message.",
@@ -83,8 +83,8 @@ T = {
         "team_h": "Equipo",
         "team_sub": "Las personas detr&aacute;s del trabajo.",
         "team": [
-            ("agustin", "Agust&iacute;n", "Teor&iacute;a de juegos y solvers de informaci&oacute;n imperfecta."),
             ("ismael", "Ismael", "B&uacute;squeda, planificaci&oacute;n y aprendizaje por refuerzo."),
+            ("agustin", "Agust&iacute;n", "Teor&iacute;a de juegos y solvers de informaci&oacute;n imperfecta."),
         ],
         "contact_h": "&iquest;Ten&eacute;s un problema dif&iacute;cil?",
         "contact_p": "Contanos. Respondemos todos los mensajes.",
