@@ -47,8 +47,6 @@ T = {
         "contact_h": "Have a hard problem?",
         "contact_p": "Tell us about it.",
         "contact_btn": "founder@pythagorae.com",
-        "copy": "Copy",
-        "copied": "Copied!",
         "legal": "Pythagorae S.A.S. &middot; CUIT 30-71960531-8 &middot; C&oacute;rdoba, Argentina",
     },
     "es": {
@@ -87,8 +85,6 @@ T = {
         "contact_h": "&iquest;Ten&eacute;s un problema dif&iacute;cil?",
         "contact_p": "Contanos.",
         "contact_btn": "founder@pythagorae.com",
-        "copy": "Copiar",
-        "copied": "&iexcl;Copiado!",
         "legal": "Pythagorae S.A.S. &middot; CUIT 30-71960531-8 &middot; C&oacute;rdoba, Argentina",
     },
 }
@@ -171,8 +167,8 @@ def page(lang, t):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=17">
-<script defer src="/site.js?v=17"></script>
+<link rel="stylesheet" href="/style.css?v=16">
+<script defer src="/site.js?v=15"></script>
 </head>
 <body>
 
@@ -233,10 +229,7 @@ def page(lang, t):
   <div class="wrap reveal">
     <h2>{t["contact_h"]}</h2>
     <p>{t["contact_p"]}</p>
-    <div class="contact-actions">
-      <a class="btn primary big" href="mailto:founder@pythagorae.com">{t["contact_btn"]}</a>
-      <button class="btn ghost big copy" type="button" data-copy="founder@pythagorae.com" data-done="{t["copied"]}">{t["copy"]}</button>
-    </div>
+    <a class="btn primary big" href="mailto:founder@pythagorae.com">{t["contact_btn"]}</a>
   </div>
 </section>
 
