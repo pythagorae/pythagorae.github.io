@@ -43,6 +43,7 @@ T = {
         "team_h": "Team",
         "team_sub": "The people behind the work.",
         "team": [
+            ("felipe", "Felipe", "Satellite and radar systems, distributed systems and AI."),
             ("ismael", "Ismael", "Search, planning and reinforcement learning."),
             ("agustin", "Agust&iacute;n", "Game theory and imperfect-information solvers."),
         ],
@@ -83,6 +84,7 @@ T = {
         "team_h": "Equipo",
         "team_sub": "Las personas detr&aacute;s del trabajo.",
         "team": [
+            ("felipe", "Felipe", "Sistemas satelitales y de radar, sistemas distribuidos e IA."),
             ("ismael", "Ismael", "B&uacute;squeda, planificaci&oacute;n y aprendizaje por refuerzo."),
             ("agustin", "Agust&iacute;n", "Teor&iacute;a de juegos y solvers de informaci&oacute;n imperfecta."),
         ],
