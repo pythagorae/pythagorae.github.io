@@ -241,11 +241,11 @@ def page(lang, t):
 <footer class="foot">
   <div class="wrap foot-in">
     <ul class="social">
-      <li><a href="https://github.com/pythagorae">GitHub</a></li>
-      <li><a href="https://huggingface.co/pythagorae">Hugging Face</a></li>
-      <li><a href="https://www.linkedin.com/company/pythagorae">LinkedIn</a></li>
-      <li><a href="https://x.com/pythagorae_ai">X</a></li>
-      <li><a href="https://www.youtube.com/@pythagorae">YouTube</a></li>
+      <li><a href="https://github.com/pythagorae" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://huggingface.co/pythagorae" target="_blank" rel="noopener">Hugging Face</a></li>
+      <li><a href="https://www.linkedin.com/company/pythagorae" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://x.com/pythagorae_ai" target="_blank" rel="noopener">X</a></li>
+      <li><a href="https://www.youtube.com/@pythagorae" target="_blank" rel="noopener">YouTube</a></li>
     </ul>
     <p class="legal">{t["legal"]}</p>
   </div>
