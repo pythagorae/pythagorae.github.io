@@ -32,7 +32,7 @@ T = {
         "cap_h": "Capabilities",
         "caps": [
             ("ai", "Artificial intelligence &amp; machine learning", "Model development, training and evaluation; reinforcement learning; integration of large language models into real systems."),
-            ("decision", "Optimal solvers for AI", "Extending language models with search, planning and optimization engines, and with solvers for imperfect-information problems &mdash; so AI agents reach optimal decisions, not just plausible ones."),
+            ("decision", "Optimal solvers for AI", "Extending language models with search, planning, optimization engines and imperfect-information solvers &mdash; so AI agents reach optimal decisions, not just plausible ones."),
             ("local", "Local LLM inference", "Open language models running on your own hardware &mdash; GPU sizing, serving, quantization and fine-tuning. Private, sovereign and cost-controlled."),
             ("signal", "Signal &amp; data processing", "High-volume sensor and telemetry data &mdash; from raw streams and undocumented formats to calibrated, usable products."),
             ("hpc", "High-performance &amp; distributed systems", "GPU and HPC computing, cloud and on-premise infrastructure, reliable systems in production."),
@@ -71,7 +71,7 @@ T = {
         "cap_h": "Capacidades",
         "caps": [
             ("ai", "Inteligencia artificial y aprendizaje autom&aacute;tico", "Desarrollo, entrenamiento y evaluaci&oacute;n de modelos; aprendizaje por refuerzo; integraci&oacute;n de modelos de lenguaje en sistemas reales."),
-            ("decision", "Solvers &oacute;ptimos para IA", "Extendemos modelos de lenguaje con motores de b&uacute;squeda, planificaci&oacute;n y optimizaci&oacute;n, y con solvers para problemas de informaci&oacute;n imperfecta &mdash; para que los agentes de IA lleguen a decisiones &oacute;ptimas, no solo plausibles."),
+            ("decision", "Solvers &oacute;ptimos para IA", "Extendemos modelos de lenguaje con b&uacute;squeda, planificaci&oacute;n, motores de optimizaci&oacute;n y solvers de informaci&oacute;n imperfecta &mdash; para que los agentes de IA lleguen a decisiones &oacute;ptimas, no solo plausibles."),
             ("local", "Inferencia de LLM local", "Modelos de lenguaje abiertos corriendo en tu propio hardware &mdash; dimensionamiento de GPU, serving, cuantizaci&oacute;n y fine-tuning. Privado, soberano y con costo controlado."),
             ("signal", "Procesamiento de se&ntilde;ales y datos", "Datos de sensores y telemetr&iacute;a en gran volumen &mdash; de flujos crudos y formatos sin documentar a productos calibrados y utilizables."),
             ("hpc", "Sistemas distribuidos y de alto rendimiento", "C&oacute;mputo en GPU y HPC, infraestructura en la nube y propia, sistemas confiables en producci&oacute;n."),
