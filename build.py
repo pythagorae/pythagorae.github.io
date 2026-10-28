@@ -37,11 +37,12 @@ T = {
             ("signal", "Signal &amp; data processing", "High-volume sensor and telemetry data &mdash; from raw streams and undocumented formats to calibrated, usable products."),
             ("hpc", "High-performance &amp; distributed systems", "GPU and HPC computing, cloud and on-premise infrastructure, reliable systems in production."),
             ("space", "Space &amp; ground systems", "Software for satellite, ground-segment and scientific systems, with correctness built in from the start."),
+            ("cyber", "Cybersecurity", "Security assessment for organizations and public bodies: penetration testing, exposure and third-party dependency analysis, and resilience plans &mdash; AI-assisted."),
         ],
         "team_h": "Team",
         "team": [
             ("felipe", "Felipe", "Satellite systems &middot; radar &middot; distributed systems &middot; AI"),
-            ("ismael", "Ismael", "Search &middot; planning &middot; reinforcement learning"),
+            ("ismael", "Ismael", "Search &middot; planning &middot; reinforcement learning &middot; cybersecurity"),
             ("agustin", "Agust&iacute;n", "Game theory &middot; imperfect-information solvers"),
         ],
         "contact_h": "Have a hard problem?",
@@ -75,11 +76,12 @@ T = {
             ("signal", "Procesamiento de se&ntilde;ales y datos", "Datos de sensores y telemetr&iacute;a en gran volumen &mdash; de flujos crudos y formatos sin documentar a productos calibrados y utilizables."),
             ("hpc", "Sistemas distribuidos y de alto rendimiento", "C&oacute;mputo en GPU y HPC, infraestructura en la nube y propia, sistemas confiables en producci&oacute;n."),
             ("space", "Sistemas espaciales y de segmento terreno", "Software para sistemas satelitales, de segmento terreno y cient&iacute;ficos, con la correcci&oacute;n incorporada desde el dise&ntilde;o."),
+            ("cyber", "Ciberseguridad", "Evaluaci&oacute;n de seguridad para organizaciones y organismos p&uacute;blicos: pruebas de penetraci&oacute;n, an&aacute;lisis de exposici&oacute;n y de dependencia de terceros, y planes de resiliencia &mdash; asistido por IA."),
         ],
         "team_h": "Equipo",
         "team": [
             ("felipe", "Felipe", "Sistemas satelitales &middot; radar &middot; sistemas distribuidos &middot; IA"),
-            ("ismael", "Ismael", "B&uacute;squeda &middot; planificaci&oacute;n &middot; aprendizaje por refuerzo"),
+            ("ismael", "Ismael", "B&uacute;squeda &middot; planificaci&oacute;n &middot; aprendizaje por refuerzo &middot; ciberseguridad"),
             ("agustin", "Agust&iacute;n", "Teor&iacute;a de juegos &middot; solvers de informaci&oacute;n imperfecta"),
         ],
         "contact_h": "&iquest;Ten&eacute;s un problema dif&iacute;cil?",
@@ -167,7 +169,7 @@ def page(lang, t):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=16">
+<link rel="stylesheet" href="/style.css?v=18">
 <script defer src="/site.js?v=15"></script>
 </head>
 <body>

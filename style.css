@@ -180,6 +180,16 @@ blockquote {
 .card p { margin: 0; color: var(--muted); font-size: clamp(1.02rem, 1.3vw, 1.12rem); line-height: 1.6; }
 .art { display: block; width: 100%; height: 100%; padding: .5rem; box-sizing: border-box; }
 
+/* la 7a tarjeta: centrada abajo, del mismo ancho que una columna */
+.grid > .card:last-child:nth-child(odd) {
+  grid-column: 1 / -1; justify-self: center; width: calc(50% - 0.75rem);
+}
+
+.a-find { fill: none; stroke: var(--bronze-2); stroke-width: 1.6; opacity: .9;
+  transform-box: fill-box; transform-origin: center; animation: ping 2.6s ease-out infinite; }
+@keyframes ping { 0% { transform: scale(.5); opacity: .95; } 70%, 100% { transform: scale(1.5); opacity: 0; } }
+.a-sweep rect { fill: var(--bronze-2); opacity: .5; filter: drop-shadow(0 0 7px rgba(232, 207, 134, .85)); }
+
 /* capability art */
 .a-line { stroke: var(--blue); stroke-opacity: .28; stroke-width: 1; }
 .a-dot { fill: var(--fg); fill-opacity: .85; }
@@ -249,6 +259,7 @@ blockquote {
   .hero-art { order: -1; }
   .tetractys { max-width: 220px; }
   .grid { grid-template-columns: 1fr; }
+  .grid > .card:last-child:nth-child(odd) { grid-column: auto; width: auto; }
   .card-art { height: 230px; }
   .principles { grid-template-columns: 1fr; gap: 1.4rem; }
 }
@@ -268,6 +279,7 @@ blockquote {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  .a-sweep, .a-find { display: none; }
   .edge { stroke-dashoffset: 0; }
   .node { opacity: 1; }
   .js .reveal { opacity: 1; transform: none; }

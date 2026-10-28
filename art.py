@@ -152,4 +152,36 @@ def space():
     return _svg("".join(out))
 
 
-ART = {"ai": ai, "decision": decision, "local": local, "signal": signal, "hpc": hpc, "space": space}
+def cyber():
+    """An infrastructure mesh under a scanning sweep; one weak node lights up."""
+    cols = [55, 110, 165, 220, 275]
+    rows = [38, 80, 122]
+    pts = [(x, y) for y in rows for x in cols]
+    weak = pts[6]
+    out = []
+    for r in range(len(rows)):
+        for c in range(len(cols)):
+            x, y = cols[c], rows[r]
+            if c < len(cols) - 1:
+                out.append(f'<line class="a-line" x1="{x}" y1="{y}" x2="{cols[c + 1]}" y2="{y}"/>')
+            if r < len(rows) - 1:
+                out.append(f'<line class="a-line" x1="{x}" y1="{y}" x2="{x}" y2="{rows[r + 1]}"/>')
+                if c < len(cols) - 1:
+                    out.append(f'<line class="a-line" x1="{x}" y1="{y}" x2="{cols[c + 1]}" y2="{rows[r + 1]}"/>')
+    for k, (x, y) in enumerate(pts):
+        if (x, y) == weak:
+            continue
+        out.append(f'<circle class="a-dot a-breathe" style="--d:{(k % 5) * .3:.1f}s" cx="{x}" cy="{y}" r="4.5"/>')
+    # the finding: ring + core, pulsing
+    out.append(f'<circle class="a-find" cx="{weak[0]}" cy="{weak[1]}" r="11"/>')
+    out.append(f'<circle class="a-hot a-breathe" cx="{weak[0]}" cy="{weak[1]}" r="6"/>')
+    # sweep
+    out.append(
+        '<g class="a-sweep"><rect x="-1.2" y="-18" width="2.4" height="196" rx="1.2"/>'
+        '<animateTransform attributeName="transform" type="translate" dur="4s" '
+        'values="30,0; 290,0; 30,0" keyTimes="0;0.5;1" repeatCount="indefinite"/></g>'
+    )
+    return _svg("".join(out))
+
+
+ART = {"ai": ai, "decision": decision, "local": local, "signal": signal, "hpc": hpc, "space": space, "cyber": cyber}
