@@ -41,7 +41,7 @@ T = {
         ],
         "team_h": "Team",
         "team": [
-            ("felipe", "Felipe", "Satellite systems &middot; radar &middot; distributed systems &middot; planning &middot; AI"),
+            ("felipe", "Felipe", "Satellite systems &middot; radar &middot; distributed systems &middot; AI"),
             ("ismael", "Ismael", "Search &middot; reinforcement learning &middot; cybersecurity"),
             ("agustin", "Agust&iacute;n", "Game theory &middot; imperfect-information solvers"),
         ],
@@ -80,7 +80,7 @@ T = {
         ],
         "team_h": "Equipo",
         "team": [
-            ("felipe", "Felipe", "Sistemas satelitales &middot; radar &middot; sistemas distribuidos &middot; planificaci&oacute;n &middot; IA"),
+            ("felipe", "Felipe", "Sistemas satelitales &middot; radar &middot; sistemas distribuidos &middot; IA"),
             ("ismael", "Ismael", "B&uacute;squeda &middot; aprendizaje por refuerzo &middot; ciberseguridad"),
             ("agustin", "Agust&iacute;n", "Teor&iacute;a de juegos &middot; solvers de informaci&oacute;n imperfecta"),
         ],
