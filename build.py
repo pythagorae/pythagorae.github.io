@@ -37,7 +37,7 @@ T = {
             ("signal", "Signal &amp; data processing", "High-volume sensor and telemetry data &mdash; from raw streams and undocumented formats to calibrated, usable products."),
             ("hpc", "High-performance &amp; distributed systems", "GPU and HPC computing, cloud and on-premise infrastructure, reliable systems in production."),
             ("space", "Space &amp; ground systems", "Software for satellite, ground-segment and scientific systems, with correctness built in from the start."),
-            ("cyber", "Cybersecurity", "Security assessment for organizations and public bodies: penetration testing, exposure and third-party dependency analysis, and resilience plans &mdash; AI-assisted."),
+            ("cyber", "Cybersecurity", "Security assessment for organizations and public bodies &mdash; AI-assisted."),
         ],
         "team_h": "Team",
         "team": [
@@ -76,7 +76,7 @@ T = {
             ("signal", "Procesamiento de se&ntilde;ales y datos", "Datos de sensores y telemetr&iacute;a en gran volumen &mdash; de flujos crudos y formatos sin documentar a productos calibrados y utilizables."),
             ("hpc", "Sistemas distribuidos y de alto rendimiento", "C&oacute;mputo en GPU y HPC, infraestructura en la nube y propia, sistemas confiables en producci&oacute;n."),
             ("space", "Sistemas espaciales y de segmento terreno", "Software para sistemas satelitales, de segmento terreno y cient&iacute;ficos, con la correcci&oacute;n incorporada desde el dise&ntilde;o."),
-            ("cyber", "Ciberseguridad", "Evaluaci&oacute;n de seguridad para organizaciones y organismos p&uacute;blicos: pruebas de penetraci&oacute;n, an&aacute;lisis de exposici&oacute;n y de dependencia de terceros, y planes de resiliencia &mdash; asistido por IA."),
+            ("cyber", "Ciberseguridad", "Evaluaci&oacute;n de seguridad para organizaciones y organismos p&uacute;blicos &mdash; asistida por IA."),
         ],
         "team_h": "Equipo",
         "team": [
